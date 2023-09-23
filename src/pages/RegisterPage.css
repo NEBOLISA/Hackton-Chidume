@@ -1,0 +1,154 @@
+.register {
+  height: 100%;
+}
+.register .section_img {
+  width: 500px;
+}
+.register main {
+  margin-top: 3rem;
+}
+.nav_wrapper {
+  margin: 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.register .main_wrapper {
+  margin: 0;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reg_header {
+  color: #d434fe;
+}
+.reg_header1 {
+  display: none;
+  color: #d434fe;
+}
+.register .container p {
+  color: white;
+}
+.register .left_main {
+  flex: 0.7;
+}
+.register .container {
+  width: 450px;
+  height: fit-content;
+  padding: 2rem 3rem;
+  margin-bottom: 1rem;
+}
+.register .inputs_div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.register .left_input {
+  width: 100%;
+  z-index: 500;
+}
+.register .right_input {
+  width: 100%;
+  z-index: 500;
+}
+.register .label {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+.register .input {
+  margin-top: 10px;
+}
+.register input::placeholder {
+  color: gray;
+}
+.register .right_main {
+  flex: 0.5;
+}
+.register .btn_wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.register .btn {
+  width: 100%;
+  margin-top: 5px;
+  z-index: 9999;
+}
+.register .agreement_div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.register .check_btn {
+  margin: 0 10px 0 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: 1px solid rgb(252, 252, 252);
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  position: relative;
+  outline: none;
+}
+.register .check_btn::before {
+  content: "\2713";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  visibility: hidden;
+}
+.register .check_btn:checked::before {
+  visibility: visible;
+}
+.register .check_btn:checked {
+  background-color: blue;
+}
+@media (max-width: 1181px) {
+  .rightflare {
+    display: none;
+  }
+  .register .nav_wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 910px) {
+  .register .main_wrapper {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .reg_header1 {
+    display: block;
+    color: #d434fe;
+  }
+  .reg_header {
+    display: none;
+  }
+}
+@media (max-width: 561px) {
+  .register .inputs_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .register .container {
+    width: 90%;
+  }
+  .leftflare {
+    display: none;
+  }
+  .register .section_img {
+    width: 400px;
+  }
+}

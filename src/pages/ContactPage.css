@@ -1,0 +1,160 @@
+.contactPage {
+  height: 100%;
+  margin: 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_main {
+  align-self: baseline;
+}
+.right_main {
+}
+.main_wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_main .header {
+  color: #d434fe;
+}
+.left_main .contact_details {
+  color: white;
+}
+.left_main .contact_details span {
+  margin-bottom: 10px;
+}
+.socials p {
+  color: #d434fe;
+
+  margin-bottom: 5px;
+}
+.social_icons {
+  display: flex;
+  align-items: center;
+}
+.socials .social_icon {
+  margin-right: 1rem;
+}
+.container {
+  position: relative;
+  border-radius: 6px;
+  width: 300px;
+
+  background-color: #120e21;
+  padding: 2rem 4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container p {
+  color: #d434fe;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.right_header {
+  margin-bottom: 1.5rem;
+}
+.input {
+  border: 0.6px solid white;
+  padding: 7px 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+.input input {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.input input::placeholder {
+  color: white;
+}
+.input textarea {
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  color: white;
+  border: none;
+}
+.input textarea::placeholder {
+  color: white;
+}
+.submit_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1147px) {
+  .contactPage {
+    height: 100%;
+    margin: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 910px) {
+  .main_wrapper {
+    display: flex;
+    width: 90%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left_main {
+    align-self: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .container_star {
+    left: 30%;
+  }
+}
+@media (max-width: 757px) {
+  .header_wrapper {
+    display: none;
+  }
+  .back {
+    display: block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  .container {
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+  .left_main .header {
+    display: none;
+  }
+  .left_main .contact_details {
+    display: none;
+  }
+  .main_wrapper {
+    width: 100%;
+  }
+  .contactPage {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .rightflare {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .leftflare {
+    display: none;
+  }
+}

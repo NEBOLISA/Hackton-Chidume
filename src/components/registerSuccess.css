@@ -1,0 +1,65 @@
+.registerSuccess {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 998;
+}
+.successWrapper {
+  padding: 2rem;
+  width: 500px;
+  border-radius: 4px;
+  border: 1px solid #d434fe;
+}
+.success_icon {
+  width: 300px;
+}
+.success_icon_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.successWrapper h3 {
+  color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.successWrapper p {
+  color: white;
+  width: 50%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 12px;
+}
+.registerSuccess .register_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+}
+.registerSuccess .btn {
+  z-index: 5000;
+}
