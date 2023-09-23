@@ -1,0 +1,29 @@
+.phoneNav ul li {
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.phoneNav .close_btn {
+  text-align: end;
+  margin: 2rem;
+}
+.phoneNav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.phoneNav ul li {
+  margin-top: 1rem;
+}
+.phoneNav nav {
+  padding-left: 2.5rem;
+}
+.phoneNav {
+  padding-bottom: 1rem;
+  background-color: #150e28;
+  z-index: 700;
+  height: 100vh;
+}
+.hideNav {
+  position: absolute;
+  left: -300px;
+  transition: left 0.5s ease-out;
+}

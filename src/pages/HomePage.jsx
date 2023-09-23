@@ -1,5 +1,9 @@
 import Navbar from "../components/navbar";
 import "./HomePage.css";
+import xIcon from "../assets/images/x.svg";
+import facebookIcon from "../assets/images/facebook.svg";
+import linkedIcon from "../assets/images/linkedin.svg";
+import InstagramIcon from "../assets/images/instagram.svg";
 import vector1 from "../assets/images/Vector1.svg";
 import vector2 from "../assets/images/Vector2.svg";
 
@@ -11,13 +15,16 @@ import vector10 from "../assets/images/vector10.svg";
 import vector13 from "../assets/images/vector13.svg";
 import vector14 from "../assets/images/vector14.svg";
 import vector15 from "../assets/images/vector15.svg";
+import vector16 from "../assets/images/vector16.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 import man from "../assets/images/man.svg";
 import ButtonComp from "../components/button";
 import { Link } from "react-router-dom";
+import PhoneNav from "../components/phoneNav";
 function HomePage() {
+  const [navOpen, setNavOpen] = useState(false);
   const [answers, setAnswers] = useState(Array(6).fill("default value"));
   useEffect(() => {
     fetchData();
@@ -37,10 +44,17 @@ function HomePage() {
   const openAnswer = (e, i) => {
     e.target.className = "active";
   };
+  const openNav = () => {
+    setNavOpen(true);
+  };
+  const closeNav = () => {
+    setNavOpen(false);
+  };
   return (
     <div className="homepage">
+      <PhoneNav navOpen={navOpen} closeNav={closeNav} />
       <div className="nav_wrapper">
-        <Navbar page="home" />
+        <Navbar page="home" openNav={openNav} />
       </div>
       <div className="border_line"></div>
       <main className="home_main">
@@ -195,9 +209,7 @@ function HomePage() {
                 <div className="qa_div">
                   <div class="question">
                     Can I work on a project I started before the hackathon?
-                    <span onClick={() => openAnswer(i)} class="plus-button">
-                      +
-                    </span>
+                    <span class="plus-button">+</span>
                   </div>
                   <div class="answer">Paris is the capital of France.</div>
                 </div>
@@ -318,6 +330,69 @@ function HomePage() {
           </div>
         </div>
       </section>
+      <div className="border_line"></div>
+      <section className="eight_section">
+        <h3>Partners and Sponsors</h3>
+        <p>
+          Getlinked Hackathon 1.0 is honored to have the following major
+          companies as its partners and sponsors
+        </p>
+        <div className="img_wrapper">
+          <img src={vector16} alt="vector16" />
+        </div>
+      </section>
+      <footer>
+        <div className="footer_wrapper">
+          <div
+            className="
+        left_footer"
+          >
+            <h3>
+              get<span style={{ color: "#D434FE" }}>linked</span>
+            </h3>
+            <p>
+              Getlinked Tech Hackathon is a technology innovation program
+              established by a group of organizations with the aim of showcasing
+              young and talented individuals in the field of technology
+            </p>
+            <p>
+              Terms of Use <span style={{ color: "#D434FE" }}>| </span>Privacy
+              Policy
+            </p>
+          </div>
+          <div
+            className="
+        middle_footer"
+          >
+            <p>Useful Links</p>
+            <ul>
+              <li>Overview</li>
+              <li>Timeline</li>
+              <li>FAQs</li>
+              <li>Register</li>
+            </ul>
+            <div className="socials">
+              <p>Follow us</p>
+              <img src={InstagramIcon} alt="insta_icon" />
+              <img src={xIcon} alt="x_icon" />
+              <img src={facebookIcon} alt="fb_icon" />
+              <img src={linkedIcon} alt="linkdin_icon" />
+            </div>
+          </div>
+          <div
+            className="
+        right_footer"
+          >
+            <p className="header">Contact us</p>
+            <p>+234 6707653444</p>
+            <p>
+              27,Alara Street
+              <br /> Yaba 100012 <br />
+              Lagos State
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

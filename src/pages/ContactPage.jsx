@@ -179,7 +179,7 @@ function ContactPage() {
                 ></textarea>
               </div>
               <div className="submit_btn">
-                <ButtonComp text={posting ? "Loading" : "Submit"} />
+                <ButtonComp text={posting ? "Loading..." : "Submit"} />
               </div>
             </form>
           </div>

@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import ButtonComp from "./button";
 import "./navbar.css";
 import backArrow from "../assets/images/vector11.svg";
-
-function Navbar({ page }) {
+import vector12 from "../assets/images/Vector12.svg";
+function Navbar({ page, openNav }) {
   const navigate = useNavigate();
   const handleGoBack = () => {
     navigate(-1);
@@ -34,13 +34,19 @@ function Navbar({ page }) {
               </Link>
             </li>
           </ul>
-          <Link to="/register">
+          <Link className="btn_link" to="/register">
             {page === "register" ? (
               <ButtonComp text="Register" className="register" />
             ) : (
               <ButtonComp text="Register" />
             )}
           </Link>
+          <img
+            onClick={openNav}
+            className={page === "home" ? "show" : "none"}
+            src={vector12}
+            alt="vector12"
+          />
         </nav>
       </div>
     </header>

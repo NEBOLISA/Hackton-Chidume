@@ -193,6 +193,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 85%;
+  margin-bottom: 2rem;
 }
 .sixth_header {
   color: white;
@@ -276,6 +277,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 85%;
+  margin-bottom: 2rem;
 }
 .seventh_wrapper {
   display: flex;
@@ -301,6 +303,118 @@
 }
 .right_seventh img {
   width: 500px;
+}
+.eight_section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+.eight_section h3 {
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 3rem;
+  font-family: "Clash Display", sans-serif;
+}
+.eight_section p {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.eight_section img {
+  width: 800px;
+}
+.eight_section .img_wrapper {
+  text-align: center;
+}
+footer {
+  background-color: #100b20;
+  margin-top: 4rem;
+}
+.footer_wrapper {
+  padding: 1rem;
+  background-color: #100b20;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.left_footer h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 27px;
+  font-family: "Clash Display", sans-serif;
+}
+.left_footer p {
+  margin-top: 0;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.middle_footer p {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  color: #d434fe;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+.middle_footer ul {
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+.middle_footer li {
+  cursor: pointer;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+.middle_footer .socials {
+  display: flex;
+  align-items: center;
+}
+.middle_footer .socials img {
+  margin-right: 0.6rem;
+  cursor: pointer;
+}
+.middle_footer .socials p {
+  margin-right: 0.5rem;
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #d434fe;
+}
+.right_footer .header {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  color: #d434fe;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+.right_footer p {
+  margin-top: 0;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 1200px) {
   .homepage .nav_wrapper {
@@ -385,5 +499,209 @@
   }
   .fifth_section .right_second {
     align-self: auto;
+  }
+  .fifth_section .left_second {
+    align-self: center;
+  }
+  .timeline {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+  }
+  .event {
+    margin-bottom: 0.3rem;
+    margin-top: 0.5rem;
+  }
+  .middle_section img {
+    width: 750px;
+    height: 750px;
+  }
+  .time {
+    margin-top: 0.5rem;
+  }
+  .details {
+    margin: 0;
+  }
+  .middle_section {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  .left {
+    text-align: start;
+  }
+  .left .details {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .right_seventh img {
+    width: 300px;
+  }
+  .left_seventh img {
+    width: 300px;
+  }
+  .eight_section img {
+    width: 600px;
+  }
+}
+@media (max-width: 980px) {
+  .middle_section img {
+    width: 750px;
+    height: 790px;
+  }
+  .sixth_sub_header {
+    width: 70%;
+  }
+}
+@media (max-width: 813px) {
+  .middle_section img {
+    width: 750px;
+    height: 810px;
+  }
+}
+@media (max-width: 800px) {
+  .footer_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .seventh_wrapper {
+    flex-direction: column;
+  }
+  .seventh_section h3,
+  .seventh_section p {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left_seventh {
+    align-self: center;
+  }
+  .right_seventh {
+    align-self: center;
+  }
+}
+@media (max-width: 757px) {
+  .showNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: left 0.5s ease-in;
+  }
+  .header_wrapper {
+    display: flex;
+  }
+  .header ul {
+    display: none;
+  }
+  .btn_link {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+}
+@media (max-width: 675px) {
+  .eight_section img {
+    width: 500px;
+  }
+  .text_img {
+    width: 450px;
+  }
+  .first_sec_img {
+    width: 400px;
+  }
+  .first_sec_img_div {
+    align-self: center;
+  }
+  .fifth_sec_img,
+  .fourth_sec_img,
+  .third_sec_img,
+  .eight_section img,
+  .second_section img {
+    width: 400px;
+    height: 400px;
+  }
+  .first_top_text {
+    font-size: 1rem;
+  }
+  .text_img {
+    margin-top: 1rem;
+  }
+  .text_underline {
+    right: 5%;
+    width: 150px;
+  }
+}
+@media (max-width: 550px) {
+  .text_img {
+    width: 350px;
+  }
+}
+@media (max-width: 550px) {
+  .middle_section img {
+    display: none;
+  }
+  .eight_section p {
+    width: 90%;
+  }
+  .fifth_sec_img,
+  .first_sec_img,
+  .fourth_sec_img,
+  .third_sec_img,
+  .eight_section img,
+  .second_section img {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .fifth_sec_img,
+  .first_sec_img,
+  .fourth_sec_img,
+  .third_sec_img,
+  .eight_section img,
+  .second_section img {
+    width: 300px;
+    height: 300px;
+  }
+  .text_img {
+    width: 300px;
+  }
+  .home_main,
+  .second_section,
+  .third_section,
+  .fourth_section,
+  .fifth_section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 340px) {
+  .fifth_sec_img,
+  .first_sec_img,
+  .fourth_sec_img,
+  .third_sec_img,
+  .eight_section img,
+  .second_section img {
+    width: 250px;
+    height: 250px;
+  }
+  .text_img,
+  .left_seventh img,
+  .right_seventh img {
+    width: 250px;
   }
 }
