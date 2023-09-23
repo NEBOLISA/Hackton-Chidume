@@ -13,7 +13,9 @@ function PhoneNav({ navOpen, closeNav }) {
           <li>Timeline</li>
           <li>Overview</li>
           <li>FAQs</li>
-          <li>Contact</li>
+          <Link className="link" to="/contact">
+            <li>Contact</li>
+          </Link>
         </ul>
         <Link to="/register">
           <ButtonComp text="Register" />
