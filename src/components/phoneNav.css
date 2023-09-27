@@ -19,7 +19,7 @@
 .phoneNav {
   padding-bottom: 1rem;
   background-color: #150e28;
-  z-index: 700;
+  z-index: 7000000;
   height: 100vh;
 }
 .hideNav {

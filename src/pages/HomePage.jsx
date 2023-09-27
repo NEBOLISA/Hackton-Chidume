@@ -16,19 +16,38 @@ import vector13 from "../assets/images/vector13.svg";
 import vector14 from "../assets/images/vector14.svg";
 import vector15 from "../assets/images/vector15.svg";
 import vector16 from "../assets/images/vector16.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-
-import man from "../assets/images/man.svg";
+import { gsap } from "gsap";
+import man from "../assets/images/man2.svg";
 import ButtonComp from "../components/button";
 import { Link } from "react-router-dom";
 import PhoneNav from "../components/phoneNav";
 function HomePage() {
   const [navOpen, setNavOpen] = useState(false);
   const [answers, setAnswers] = useState(Array(6).fill("default value"));
+  const imageRef = useRef(null);
+
+  const [time, setTime] = useState(new Date());
+
   useEffect(() => {
     fetchData();
+    const intervalId = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0, scale: 0.5, rotation: 0 },
+      { opacity: 1, scale: 1, duration: 1, rotation: 360, ease: "power2.out" }
+    );
+    return () => clearInterval(intervalId);
   }, []);
+
+  const formatTime = (value) => (value < 10 ? `0${value}` : value);
+
+  const hours = formatTime(time.getHours());
+  const minutes = formatTime(time.getMinutes());
+  const seconds = formatTime(time.getSeconds());
 
   const fetchData = () => {
     axios
@@ -41,7 +60,7 @@ function HomePage() {
         console.error("Error fetching data:", error);
       });
   };
-  const openAnswer = (e, i) => {
+  const openAnswer = (e) => {
     e.target.className = "active";
   };
   const openNav = () => {
@@ -58,7 +77,7 @@ function HomePage() {
       </div>
       <div className="border_line"></div>
       <main className="home_main">
-        <section className="first_section">
+        <section id="overview" className="first_section">
           <div className="first_top_text_div">
             <h2 className="first_top_text">
               Igniting a Revolution in HR Innovation
@@ -78,17 +97,22 @@ function HomePage() {
                   <ButtonComp text="Register" />
                 </Link>
                 <p className="time_comp">
-                  <span>00</span>
+                  <span>{hours}</span>
                   <sub>H</sub>
-                  <span>00</span>
+                  <span>{minutes}</span>
                   <sub>M</sub>
-                  <span>00</span>
+                  <span>{seconds}</span>
                   <sub>S</sub>
                 </p>
               </div>
             </div>
             <div className="first_sec_img_div">
-              <img src={man} className="first_sec_img" alt="man" />
+              <img
+                src={man}
+                ref={imageRef}
+                className="first_sec_img"
+                alt="man"
+              />
             </div>
           </div>
         </section>
@@ -194,7 +218,7 @@ function HomePage() {
         </div>
       </section>
       <div className="border_line"></div>
-      <section className="fifth_section">
+      <section className="fifth_section" id="faqs">
         <div className="left_second">
           <img className="fifth_sec_img" src={vector10} alt="vector10" />
         </div>
@@ -209,7 +233,9 @@ function HomePage() {
                 <div className="qa_div">
                   <div class="question">
                     Can I work on a project I started before the hackathon?
-                    <span class="plus-button">+</span>
+                    <span onClick={openAnswer} class="plus-button">
+                      +
+                    </span>
                   </div>
                   <div class="answer">Paris is the capital of France.</div>
                 </div>
@@ -223,7 +249,7 @@ function HomePage() {
         </div>
       </section>
       <div className="border_line"></div>
-      <section className="sixth_section">
+      <section id="timeline" className="sixth_section">
         <h2 className="sixth_header">Timeline</h2>
         <p className="sixth_sub_header">
           Here is the breakdown of the time we anticipate using for the upcoming

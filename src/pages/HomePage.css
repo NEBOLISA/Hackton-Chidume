@@ -3,6 +3,9 @@
 .border_line {
   border-top: 0.5px solid rgb(130, 130, 130);
 }
+.homepage {
+  padding-top: 70px;
+}
 .home_main {
   margin: 0;
   width: 85%;
@@ -417,6 +420,12 @@ footer {
   font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 1200px) {
+  .home_main {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .homepage .nav_wrapper {
     width: 90%;
   }
@@ -424,7 +433,7 @@ footer {
     flex-direction: column;
   }
   .first_sec_img_div {
-    align-self: auto;
+    align-self: center;
   }
   .first_top_text {
     text-align: center;
@@ -441,6 +450,8 @@ footer {
   }
   .text_box_div {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .text_box_div p {
     text-align: center;
@@ -601,7 +612,19 @@ footer {
   .header_wrapper {
     display: flex;
   }
-  .header ul {
+  .header_text {
+    display: none;
+  }
+  .header_text_home {
+    display: flex;
+  }
+  .right_header {
+    text-align: center;
+  }
+  .reg_header1 {
+    display: none;
+  }
+  .nav_header_wrapper ul {
     display: none;
   }
   .btn_link {
