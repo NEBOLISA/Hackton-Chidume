@@ -12,7 +12,7 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     <div className="App">
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: "30000000" }} />
 
       <img className="leftflare flare" src={lensFlare} alt="lensflare" />
       <img className="container_star" src={star} alt="star" />

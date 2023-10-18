@@ -8,7 +8,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  z-index: 99999999;
 }
 .overlay {
   position: fixed;
@@ -18,7 +18,7 @@
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 998;
+  z-index: 999998;
 }
 .successWrapper {
   padding: 2rem;
