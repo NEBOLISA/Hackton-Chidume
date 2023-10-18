@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import ButtonComp from "./button";
 import "./navbar.css";
 import backArrow from "../assets/images/vector11.svg";
@@ -8,12 +9,15 @@ function Navbar({ page, openNav }) {
   const handleGoBack = () => {
     navigate(-1);
   };
-  const handleScrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToTop = () => {
+    scroll.scrollToTop();
   };
+  // const handleScrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <header className="nav_header">
@@ -26,22 +30,57 @@ function Navbar({ page, openNav }) {
         />
 
         <div className="header_wrapper">
-          <h2 className={page === "home" ? "header_text_home" : "header_text"}>
+          <h2 className={page === "home" ? "header_text" : "header_text"}>
             <Link className="link" to="/">
               <span style={{ color: "white" }}> get</span> <span>linked</span>
             </Link>
           </h2>
           <nav>
             <ul>
-              <li onClick={() => handleScrollToSection("timeline")}>
-                Timeline
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="timeline"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="normal_link"
+                >
+                  Timeline
+                </ScrollLink>
               </li>
-              <li onClick={() => handleScrollToSection("overview")}>
-                Overview
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="overview"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="normal_link"
+                >
+                  Overview
+                </ScrollLink>
               </li>
-              <li onClick={() => handleScrollToSection("faqs")}>FAQs</li>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="faqs"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="normal_link"
+                >
+                  FAQs
+                </ScrollLink>
+              </li>
               <li className="gradient_text">
-                <Link className="link" to="/contact">
+                <Link
+                  className={page === "home" ? "normal_link" : "link"}
+                  to="/contact"
+                >
                   Contact
                 </Link>
               </li>
